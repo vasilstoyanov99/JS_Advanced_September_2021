@@ -3,5 +3,3 @@ function calculatePrice(fruit, grams, pricePerKilo) {
     let cost = kilos * pricePerKilo;
     console.log(`I need $${cost.toFixed(2)} to buy ${kilos.toFixed(2)} kilograms ${fruit}.`);
 }
-
-calculatePrice('apple', 1563, 2.35);
