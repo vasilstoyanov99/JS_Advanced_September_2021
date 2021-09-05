@@ -1,4 +1,4 @@
-function sortArray(arr) {
+function getSortedArray(arr) {
 
     let sortedArray = [];
 
