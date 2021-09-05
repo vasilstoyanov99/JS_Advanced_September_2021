@@ -1,9 +1,9 @@
 function findAndPrintTheTwoSmallestNumbers(arr) {
 
-    let sortedArr = arr.sort((a, b) => a - b);
+    arr.sort((a, b) => a - b);
     let smallestNumbers = [];
-    smallestNumbers.push(sortedArr[0]);
-    smallestNumbers.push(sortedArr[1]);
+    smallestNumbers.push(arr[0]);
+    smallestNumbers.push(arr[1]);
 
     console.log(smallestNumbers);
 }
