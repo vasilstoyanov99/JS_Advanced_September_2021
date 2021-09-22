@@ -1,4 +1,4 @@
-function createCityObject(name, population, treasury) {
+function createCityRecord(name, population, treasury) {
 
     const record = {
         name,
@@ -8,8 +8,3 @@ function createCityObject(name, population, treasury) {
 
     return record;
 }
-
-console.log(createCityObject('Tortuga',
-    7000,
-    15000
-));
