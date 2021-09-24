@@ -27,7 +27,7 @@ function addSpecsToCar(car) {
     if (wheelSize % 2 === 0){
         wheelSize--;
     }
-    car.wheels = [wheelSize, wheelSize, wheelSize, wheelSize];
+    car.wheels = new Array(4).fill(wheelSize);
 
     return car;
 }
