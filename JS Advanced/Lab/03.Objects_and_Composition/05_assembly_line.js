@@ -37,14 +37,3 @@ function createAssemblyLine() {
         }
     };
 }
-
-const assemblyLine = createAssemblyLine();
-
-const myCar = {
-    make: 'Toyota',
-    model: 'Avensis'
-};
-
-assemblyLine.hasParktronic(myCar);
-myCar.checkDistance(0.4);
-myCar.checkDistance(0.2);
