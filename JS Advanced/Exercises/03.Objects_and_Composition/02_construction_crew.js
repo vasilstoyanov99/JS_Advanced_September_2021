@@ -8,9 +8,3 @@ function hydrateWorker (worker) {
 
     return worker;
 }
-
-console.log(hydrateWorker({ weight: 95,
-    experience: 3,
-    levelOfHydrated: 0,
-    dizziness: false }
-));
