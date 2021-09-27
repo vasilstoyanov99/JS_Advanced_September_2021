@@ -1,7 +1,7 @@
 function solve() {
     let text = document.getElementById('input').value;
     let sentencesArr = text.split('.')
-        .filter(a => a !== '')
+        .filter(a => a)
         .map(a => a + '.');
 
     let totalParagraphsRoof = Math.ceil(sentencesArr.length / 3);
