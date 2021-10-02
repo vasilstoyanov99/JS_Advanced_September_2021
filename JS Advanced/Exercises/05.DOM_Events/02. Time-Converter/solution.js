@@ -1,5 +1,5 @@
 function attachEventsListeners() {
-    let main = document.getElementsByTagName('main')[0]
+    document.getElementsByTagName('main')[0]
         .addEventListener('click', calculateOnClick);
     let daysElement = document.getElementById('days');
     let hoursElement = document.getElementById('hours');
