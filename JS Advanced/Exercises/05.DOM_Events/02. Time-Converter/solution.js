@@ -11,7 +11,6 @@ function attachEventsListeners() {
             const timeType = target.parentElement.firstElementChild.htmlFor;
             const inputValue = Number(target.parentElement.children[1].value);
 
-
             switch (timeType){
                 case 'days':{
                     hoursElement.value = inputValue * 24;
