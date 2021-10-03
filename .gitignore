@@ -10,3 +10,10 @@
 
 ### WebStorm ###
 /**/.idea/*
+
+### css, html etc. ###
+*.html
+*.css
+*.gif
+*.png
+*.jpg
