@@ -14,6 +14,7 @@
 ### css, html etc. ###
 *.html
 *.css
+*.json
 *.gif
 *.png
 *.jpg
