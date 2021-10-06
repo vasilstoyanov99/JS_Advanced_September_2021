@@ -9,22 +9,17 @@ function robot() {
         eggs: { protein: 5, fat: 1, flavour: 1},
         turkey: { protein: 10, carbohydrate: 10, fat: 10, flavour: 10},
         prepareRecipe(recipe, quantity) {
-            let notEnoughIngredient = false;
             for (const ingredient in this[recipe]) {
                 const neededIngredient = this[recipe][ingredient] * quantity;
                 if (neededIngredient > availableIngredients[ingredient] ){
-                    notEnoughIngredient = true;
                     return (`Error: not enough ${ingredient} in stock`);
                 }
             }
 
-            if (!notEnoughIngredient){
-                for (const ingredient in this[recipe]) {
-                    const neededIngredient = this[recipe][ingredient] * quantity;
-                    availableIngredients[ingredient] -= neededIngredient;
-                }
+            for (const ingredient in this[recipe]) {
+                const neededIngredient = this[recipe][ingredient] * quantity;
+                availableIngredients[ingredient] -= neededIngredient;
             }
-            
             return successMessage;
         }
     };
@@ -47,3 +42,10 @@ function robot() {
 
     return process;
 }
+
+let manager = robot ();
+console.log (manager ('prepare apple 1'));
+console.log (manager ('restock fat 10'));
+console.log (manager ('prepare apple 1'));
+console.log (manager ('prepare burger 1'));
+console.log (manager ('report'));
