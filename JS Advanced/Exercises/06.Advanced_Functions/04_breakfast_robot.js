@@ -24,6 +24,7 @@ function robot() {
                     availableIngredients[ingredient] -= neededIngredient;
                 }
             }
+            
             return successMessage;
         }
     };
@@ -46,12 +47,3 @@ function robot() {
 
     return process;
 }
-
-let manager = robot ();
-console.log (manager ('restock carbohydrate 10'));
-console.log (manager ('restock flavour 10'));
-console.log (manager ('prepare apple 1'));
-console.log (manager ('restock fat 10'));
-console.log (manager ('prepare apple 1'));
-console.log (manager ('prepare burger 1'));
-console.log (manager ('report'));
