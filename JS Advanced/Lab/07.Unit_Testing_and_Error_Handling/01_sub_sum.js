@@ -6,14 +6,13 @@ function sumRange(arr, start, end) {
         start = 0;
     }
     if (end > arr.length - 1){
-        end = arr.length;
+        end = arr.length - 1;
     }
 
-    let arrSplit = arr.splice(start, end + 1);
     let sum = 0;
 
-    for (const arrElement of arrSplit) {
-        sum += Number(arrElement);
+    for (let i = start; i <= end; i++) {
+        sum += Number(arr[i]);
     }
 
     return sum;
