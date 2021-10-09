@@ -27,9 +27,3 @@ function requestValidator(request) {
 
     return request;
 }
-
-console.log(requestValidator({
-        method: 'POST',
-        message: 'rm -rf /*'
-    }
-));
