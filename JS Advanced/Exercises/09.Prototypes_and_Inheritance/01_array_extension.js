@@ -31,6 +31,3 @@
         return this.sum() / this.length;
     }
 })()
-
-var testArray = [1, 2, 3];
-console.log(testArray.average());
