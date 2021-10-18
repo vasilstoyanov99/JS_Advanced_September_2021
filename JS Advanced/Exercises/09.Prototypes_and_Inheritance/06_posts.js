@@ -58,34 +58,3 @@ function solve() {
         Post, SocialMediaPost, BlogPost
     };
 }
-
-const classes = solve();
-/*let post = new classes.Post("Post", "Content");
-
-console.log(post.toString());*/
-
-// Post: Post
-// Content: Content
-
-/*let scm = new classes.SocialMediaPost("TestTitle", "TestContent", 25, 30);
-
-scm.addComment("Good post");
-scm.addComment("Very good post");
-scm.addComment("Wow!");
-
-console.log(scm.toString());*/
-
-console.log('-'.repeat(20));
-
-let blogPost = new classes.BlogPost('BlogPost', 'BlogPost Content', 0);
-blogPost.view().view().view();
-console.log(blogPost.toString());
-
-// Post: TestTitle
-// Content: TestContent
-// Rating: -5
-// Comments:
-//  * Good post
-//  * Very good post
-//  * Wow!
-
