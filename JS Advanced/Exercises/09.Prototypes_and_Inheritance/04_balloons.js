@@ -35,8 +35,8 @@ function solve() {
     }
 
     return {
-        Balloon: Balloon,
-        PartyBalloon: PartyBalloon,
-        BirthdayBalloon: BirthdayBalloon
+        Balloon,
+        PartyBalloon,
+        BirthdayBalloon
     }
 }
