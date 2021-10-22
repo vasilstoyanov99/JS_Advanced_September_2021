@@ -18,6 +18,7 @@
 *.gif
 *.png
 *.jpg
+*.jpeg
 *.ico
 
 ### Mocha and Chai ###
