@@ -14,7 +14,7 @@ class ChristmasDinner {
         if (value < 0) {
             throw new Error('The budget cannot be a negative number');
         }
-        
+
         this._budget = value;
     }
 
