@@ -28,7 +28,6 @@ async function lockedProfile() {
         function onClick({target}) {
             if (target.tagName === 'BUTTON'){
                 const unlockRadioButton = target.parentNode.querySelector('input[value="unlock"]');
-                const lockRadioButton = target.parentNode.querySelector('input[value="lock"]');
 
                 if (unlockRadioButton.checked){
                     let button = target.parentNode.querySelector('button');
