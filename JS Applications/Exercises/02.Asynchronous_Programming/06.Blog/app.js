@@ -20,7 +20,11 @@ function attachEvents() {
         const allPosts = document.querySelectorAll('option');
         const selectedPost = Array.from(allPosts).filter(p => p.selected === true)[0];
         const id = selectedPost.value;
-        const commentsData = await fetchAndReturnData('http://localhost:3030/jsonstore/blog/comments');
+        const [commentsData, postData] = await Promise.all([
+            fetchAndReturnData('http://localhost:3030/jsonstore/blog/comments'),
+            fetchAndReturnData (`http://localhost:3030/jsonstore/blog/posts/${id}`)
+        ]);
+
         const selectedPostComments = [];
 
         for (let key in commentsData) {
@@ -33,8 +37,6 @@ function attachEvents() {
             }
         }
 
-        const postData = await fetchAndReturnData
-        (`http://localhost:3030/jsonstore/blog/posts/${id}`);
         document.getElementById('post-title').textContent = postData.title;
         document.getElementById('post-body').textContent = postData.body;
         const commentsUl = document.getElementById('post-comments');
