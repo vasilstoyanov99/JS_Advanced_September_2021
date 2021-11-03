@@ -68,7 +68,7 @@ async function createContact() {
     personInput.value = '';
     phoneInput.value = '';
     const contact = { person, phone };
-    
+
     try {
         await postNewContact(contact);
         await loadContacts();
