@@ -65,9 +65,6 @@ async function updateBook(book, id) {
     const url = `http://localhost:3030/jsonstore/collections/books/${id}`;
     const options = {
         method: 'put',
-        headers: {
-            'Content-Type': 'application/json'
-        },
         body: JSON.stringify(book)
     };
     await request(url, options);
@@ -135,15 +132,19 @@ async function request(url, options) {
         });
     }
 
-    const response = await fetch(url, options);
+    try {
+        const response = await fetch(url, options);
 
-    if (response.ok !== true) {
-        const error = await response.json();
+        if (response.ok !== true) {
+            const error = await response.json();
+            throw new Error(error.message);
+        }
+
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
         alert(error.message);
-        throw new Error(error.message);
     }
-
-    const data = await response.json();
-
-    return data;
 }
